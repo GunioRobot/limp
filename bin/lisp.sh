@@ -18,7 +18,7 @@ VERSION=0.3.5-pre
 
 if [[ "$LIMPRUNTIME" = "" ]]; then
     LIMPDIR=$(cd $(dirname $0) ; pwd)
-else 
+else
     LIMPDIR=${LIMPRUNTIME:-/usr}
 fi
 
@@ -85,29 +85,29 @@ LIMP_SCREENRC="" # created at runtime to boot Lisp
 LIMP_SCREEN_STY_FILE="" # temp file used to grab the STY of the last created screen
 
 while [ $# -gt 0 ]; do
-    case $1 in 
+    case $1 in
         -h)         print_version; print_help; exit 0;;
         -v)         print_version; exit 0;;
         -b)         BOOT=1; shift;;
-        -c)         case "$2" in 
+        -c)         case "$2" in
                       "") shift 2;;
                        *) CORE_PATH=$2; shift 2;;
                     esac ;;
         -l)         list_running_lisps
                     exit 0;;
         -s)         case "$2" in
-                        "") echo "-s must be given a file to write the screen ID to"; 
+                        "") echo "-s must be given a file to write the screen ID to";
                             exit 1;;
                         *) LIMP_SCREEN_STY_FILE=$2; shift 2;;
                     esac ;;
         # magic!
         -p)         DO_BOOT=1;
-                    case "$2" in 
-                        "") echo "-p must be given a file containing the STY of the last screen process"; 
+                    case "$2" in
+                        "") echo "-p must be given a file containing the STY of the last screen process";
                             exit 1;;
                         *) LIMP_SCREEN_STY_FILE=$2; shift 2;;
                     esac ;;
-        -P)         case "$2" in 
+        -P)         case "$2" in
                         "") echo "-P must be given a file containing the screenrc"; exit 1;;
                         *) LIMP_SCREENRC=$2; shift 2;;
                     esac ;;
@@ -121,7 +121,7 @@ NAME="$1"
 
 #
 # this is executed from inside the screen
-# 
+#
 if [[ "$DO_BOOT" == "1" ]]; then
 
     id=$(echo $STY | cut -d '.' -f 1)
@@ -156,14 +156,14 @@ if [[ "$DO_BOOT" == "1" ]]; then
     echo -e "Welcome to Limp. May your journey be pleasant.\n"
 	$RLWRAP $SBCL --noinform $core
 
-    # cleanup 
+    # cleanup
     rm -rf "$LIMP_BRIDGE_CHANNEL"
     rm -rf "$LIMP_SCREENRC"
 #
 # first part of the Lisp screen startup
 #
 elif [[ "$BOOT" == "1" ]]; then
-    
+
     if [[ "$NAME" == "" ]]; then
         echo "Sorry, must name your Lisp."
         print_help
@@ -173,7 +173,7 @@ elif [[ "$BOOT" == "1" ]]; then
     # Check if a lisp with this name is already running
     for l in $(list_running_lisps | awk {' print $1 '})
     do
-        if [[ $l = $NAME ]]; then 
+        if [[ $l = $NAME ]]; then
             echo "A lisp with the name $NAME is running!" >&2
             list_running_lisps >&2
             exit 1
@@ -227,7 +227,7 @@ elif [[ "$BOOT" == "1" ]]; then
 
     echo "screen -t Lisp 0 $LIMPDIR/$progname $core_opt -P $initfile -p $styfile" >> $initfile
 
-    screen -c $initfile -dmS limp_listener-$NAME 
+    screen -c $initfile -dmS limp_listener-$NAME
 
     # wait for the styfile to become available
     timer=0

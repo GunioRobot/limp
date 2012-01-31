@@ -24,7 +24,7 @@ Index: src/ex_cmds.c
 @@ -6398,6 +6408,10 @@
  			++ga.ga_len;
  			sprintf((char *)s, "%s\t%s", p1, fname);
- 
+
 +                        /* take care of the Lisp case */
 +                        if (*(p2+1) == '*')
 +                            p2++;

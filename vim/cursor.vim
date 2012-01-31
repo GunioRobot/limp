@@ -1,4 +1,4 @@
-" 
+"
 " limp/vim/cursor.vim
 "
 " URL:
@@ -18,7 +18,7 @@
 " Charles E. Campbell, Jr.  <drNchipO@ScampbellPfamilyA.Mbiz>-NOSPAM
 "
 " Changelog:
-" 2008-04-18 
+" 2008-04-18
 " * Removed all leader mappings
 "
 " Usage:
@@ -179,22 +179,22 @@ endfun
 
 " ---------------------------------------------------------------------
 " ListWinPosn:
-"fun! ListWinPosn()                                                        " Decho 
-"  if !exists("b:cursor_position_index") || b:cursor_position_index == 0             " Decho 
+"fun! ListWinPosn()                                                        " Decho
+"  if !exists("b:cursor_position_index") || b:cursor_position_index == 0             " Decho
 "   call Decho("nothing on SWP stack")                                     " Decho
 "  else                                                                    " Decho
-"   let jwinposn= b:cursor_position_index                                       " Decho 
-"   while jwinposn >= 1                                                    " Decho 
-"    if exists("b:cursor_position{jwinposn}")                              " Decho 
-"     call Decho("winposn{".jwinposn."}<".b:cursor_position{jwinposn}.">") " Decho 
-"    else                                                                  " Decho 
-"     call Decho("winposn{".jwinposn."} -- doesn't exist")                 " Decho 
-"    endif                                                                 " Decho 
-"    let jwinposn= jwinposn - 1                                            " Decho 
-"   endwhile                                                               " Decho 
+"   let jwinposn= b:cursor_position_index                                       " Decho
+"   while jwinposn >= 1                                                    " Decho
+"    if exists("b:cursor_position{jwinposn}")                              " Decho
+"     call Decho("winposn{".jwinposn."}<".b:cursor_position{jwinposn}.">") " Decho
+"    else                                                                  " Decho
+"     call Decho("winposn{".jwinposn."} -- doesn't exist")                 " Decho
+"    endif                                                                 " Decho
+"    let jwinposn= jwinposn - 1                                            " Decho
+"   endwhile                                                               " Decho
 "  endif                                                                   " Decho
-"endfun                                                                    " Decho 
-"com! -nargs=0 LWP	call ListWinPosn()                                    " Decho 
+"endfun                                                                    " Decho
+"com! -nargs=0 LWP	call ListWinPosn()                                    " Decho
 
 
 " ---------------------------------------------------------------------

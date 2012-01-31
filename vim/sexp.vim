@@ -1,4 +1,4 @@
-" 
+"
 " limp/vim/sexp.vim
 "
 " URL:
@@ -25,7 +25,7 @@
 nnoremap <buffer> <Plug>MarkTop 99[(V%
 
 " Format Current:     reindent/format
-" Format Top:    
+" Format Top:
 nnoremap <buffer> <Plug>FormatCurrent   [(=%`'
 nnoremap <buffer> <Plug>FormatTop       99[(=%`'
 
@@ -96,7 +96,7 @@ fun! Sexp_MoveBack()
     " Inside an s-exp?
     let [l, c] = searchpairpos('(', '', ')', 'bcnW')
     if l == 0 || c == 0
-        " Nope, 
+        " Nope,
         return
     endif
 
@@ -120,7 +120,7 @@ fun! Sexp_MoveBack()
     " where prev_line2/prev_col2 = the ) of the previous match, and
     "       this_line2/this_col2   = the ) of the current s-exp.
     "
-    
+
     " so we can get back.
     silent! norm! ma
     let [b, this_line1, this_col1, o] = getpos('.')
@@ -179,7 +179,7 @@ fun! Sexp_MoveBack()
 
         silent! exe 'norm! `a'.movement.'"bPl'
         silent! exe 'norm! '.len(@b).'x'
-        
+
         silent! norm! `b
     else
         " different lines, so a simple paste will do
@@ -198,7 +198,7 @@ fun! Sexp_MoveForward()
     " Inside an s-exp?
     let [l, c] = searchpairpos('(', '', ')', 'bcnW')
     if l == 0 || c == 0
-        " Nope, 
+        " Nope,
         return
     endif
 
@@ -222,7 +222,7 @@ fun! Sexp_MoveForward()
     " where prev_line1/prev_col1 = the ( of the previous match, and
     "       this_line1/this_col1   = the ( of the current s-exp.
     "
-    
+
     " so we can get back.
     silent! norm! ma
     let [b, this_line1, this_col1, o] = getpos('.')
@@ -281,7 +281,7 @@ fun! Sexp_MoveForward()
 
         silent! exe 'norm! `b'.movement.'"aPl'
         silent! exe 'norm! '.len(@a).'x'
-        
+
         silent! exe 'norm! `b'.movement
     else
         " different lines, so a simple paste will do

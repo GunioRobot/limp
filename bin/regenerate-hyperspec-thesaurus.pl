@@ -8,8 +8,8 @@ $MIN_WORD_LEN = 3;
 sub process_word
 {
     my( $word ) = @_;
-    my( 
-	$n, 
+    my(
+	$n,
 	$len,
 	$substr
     );
@@ -62,7 +62,7 @@ sub main
 	&process_word( $word );
     }
 
-    foreach $word (sort( { length( $a ) <=> length( $b ) 
+    foreach $word (sort( { length( $a ) <=> length( $b )
 			   || $a cmp $b }
 			 @words ))
     {
@@ -72,10 +72,10 @@ sub main
 
     foreach $key (sort keys %matches)
     {
-	$out = join( " ", 
-		     $key, 
-		     sort( { length( $a ) <=> length( $b ) 
-			     || $a cmp $b } 
+	$out = join( " ",
+		     $key,
+		     sort( { length( $a ) <=> length( $b )
+			     || $a cmp $b }
 			   @{ $matches{ $key } } ) );
 	print $out, "\n"
 	    if (length( $out ) <= $MAX_LINE);

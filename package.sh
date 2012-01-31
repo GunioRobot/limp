@@ -17,7 +17,7 @@ cp -r bin vim $INSTALL
 cp -r install.sh $PACKAGE
 
 echo "Removing Subversion files."
-find $PACKAGE -name .svn -type d -exec rm -rf "{}" 2> /dev/null \; 
+find $PACKAGE -name .svn -type d -exec rm -rf "{}" 2> /dev/null \;
 
 echo "Packing..."
 tar czf ${PACKAGE}.tar.gz $PACKAGE

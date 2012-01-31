@@ -1,4 +1,4 @@
-" 
+"
 " limp/vim/autoclose.vim
 "
 " URL:

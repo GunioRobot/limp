@@ -1,5 +1,5 @@
 set ai
-set lisp 
+set lisp
 set expandtab
 syntax on
 
@@ -26,7 +26,7 @@ HEREDOC
 endfunction
 
 
-function Perly() 
+function Perly()
 perl << HEREDOC
 use strict;
 use IO::Socket;
@@ -130,7 +130,7 @@ close $sock;
 HEREDOC
 endfunction
 
-function LispGotoFunction() 
+function LispGotoFunction()
 perl << HEREDOC
 use strict;
 use IO::Socket;
@@ -160,7 +160,7 @@ if($#tmp == 0){
 HEREDOC
 endfunction
 
-function Lisphelpexpr() 
+function Lisphelpexpr()
 perl << HEREDOC
 use strict;
 use IO::Socket;
@@ -185,7 +185,7 @@ VIM::DoCommand(":tabnew /tmp/vimff-help.txt");
 HEREDOC
 endfunction
 
-function Lispcomplete() 
+function Lispcomplete()
 perl << HEREDOC
 use strict;
 use IO::Socket;

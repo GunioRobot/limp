@@ -1,11 +1,11 @@
-" 
+"
 " limp/vim/mode.vim
 "
 " URL:
 " http://mikael.jansson.be
 "
 " Description:
-" Lisp-mode specific functions 
+" Lisp-mode specific functions
 "
 " Authors:
 " Mikael Jansson <mail@mikael.jansson.be>
@@ -32,7 +32,7 @@ fun! LimpMode_start()
         colorscheme desert256
     endif
 
-    hi Brackets      ctermbg=53 ctermfg=white 
+    hi Brackets      ctermbg=53 ctermfg=white
     hi BracketsBlock ctermbg=235 guibg=lightgray
     hi StatusLine    ctermbg=white ctermfg=160
     hi StatusLineNC  ctermbg=black ctermfg=gray
@@ -82,7 +82,7 @@ augroup END
 syntax on
 setlocal nocompatible nocursorline
 setlocal lisp syntax=lisp
-setlocal ls=2 bs=2 si et sw=2 ts=2 tw=0 
+setlocal ls=2 bs=2 si et sw=2 ts=2 tw=0
 setlocal statusline=%<%f\ \(%{LimpBridge_connection_status()}\)\ %h%m%r%=%-14.(%l,%c%V%)\ %P\ of\ %L\ \(%.45{getcwd()}\)
 setlocal iskeyword=&,*,+,45,/,48-57,:,<,=,>,@,A-Z,a-z,_
 setlocal cpoptions=-mp

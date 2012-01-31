@@ -208,7 +208,7 @@ You can save your Lisp's state and later restore it. Very handy.
 .. figure:: screenshots/save-lisp-and-die.png
 
    Here, I've booted up a fresh Lisp and evaluated the function definition.
-   Then, ``<Shift-F12>`` asks for the path of a file to save the core in. 
+   Then, ``<Shift-F12>`` asks for the path of a file to save the core in.
    The Lisp core is now frozen in time.
 
 .. figure:: screenshots/custom-core.png
@@ -295,7 +295,7 @@ $external
   Opera's "new-page" argument to openURL gives
   each set of HyperSpec search results a new
   page. Other browsers may have analogous flags, and
-  similar behavior. 
+  similar behavior.
 
   ``limp-hyperspec.pl`` replaces %s in
   @browser_args with the URL to be opened.  See
@@ -333,14 +333,14 @@ Name Expansion
 There's a convention to talk about dashed names by abbreviating them into the first letter of each word, e.g.:
 
 .. figure:: screenshots/name-expansion.png
-   
+
    First, type this in Vim...
 
 .. figure:: screenshots/name-expansion-popup.png
 
    Then, hitting ^N^N (Ctrl-N twice) will expand the ``p-n``
    to ``package-name``.  ^N again will replace ``package-name`` with ``pathname-name``,
-   and ^N yet again will replace that with ``pprint-newline``.  See Vim help for 
+   and ^N yet again will replace that with ``pprint-newline``.  See Vim help for
    ``complete``, ``compl-generic``, and ``i_CTRL-X_CTRL-T``.  Also, see below for notes on
    this facility.
 
@@ -369,7 +369,7 @@ that instead of the default keys used for completion!
 
 Commands
 ~~~~~~~~~
-Limp defines a buffer-level command, ``:Eval``. 
+Limp defines a buffer-level command, ``:Eval``.
 
 ``:Eval <sexp>`` will evaluate an s-exp, e.g.::
 
@@ -439,7 +439,7 @@ Source transformation.
 
 * ``\mt``: *(Mark Top)*: Mark the current form to the top level
 * ``\fc``: *(Format Current)*: Reindent/format current form
-* ``\ft``: *(Format current Top level form)*: Reindent/format current form to the top level 
+* ``\ft``: *(Format current Top level form)*: Reindent/format current form to the top level
 * ``\sw``: *(S-exp Wrap)*: Wrap the current form inside another list
 * ``\sp``: *(S-exp Peel)*: Peel off a list around the current s-exp
 * ``\sc`` :*(S-exp Comment top)*: Comment top form
@@ -585,7 +585,7 @@ Version 0.2
 
 Version 0.1
 ~~~~~~~~~~~
-* 2008-04-21 by Mikael Jansson <mail@mikael.jansson.be> 
+* 2008-04-21 by Mikael Jansson <mail@mikael.jansson.be>
 
   Internal release
 

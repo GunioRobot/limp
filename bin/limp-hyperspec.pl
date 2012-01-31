@@ -111,7 +111,7 @@ sub gen_file
 sub browse
 {
     my( $browser_running, $match_type, $orig_symbol, $match_on, $pat, $make_page ) = @_;
-    my( %done, $pid, $url, $word, $fh, $filename, $do_wait, $do_read, 
+    my( %done, $pid, $url, $word, $fh, $filename, $do_wait, $do_read,
 	@keys, $dummy, $started, $num_deleted, $sleep_time );
 
     while (<>)
@@ -267,7 +267,7 @@ sub main
     my( $type, $make_page, $symbol, $first, $browser_running );
 
     # global
-    $forked_to_background = 
+    $forked_to_background =
 	$external && !$make_page && !$READLINE_ON_BROWSER_START;
 
     $| = 1;
@@ -292,8 +292,8 @@ sub main
 
     @ARGV = glob( "$BASE/Front/X_Perm_*.htm" );
 
-    if    ($type eq "exact")  { &browse( $browser_running, $type, $orig_symbol, $symbol, "#$symbol\"", $make_page ); } 
-    elsif ($type eq "prefix") { &browse( $browser_running, $type, $orig_symbol, $symbol, "#$symbol", $make_page ); } 
+    if    ($type eq "exact")  { &browse( $browser_running, $type, $orig_symbol, $symbol, "#$symbol\"", $make_page ); }
+    elsif ($type eq "prefix") { &browse( $browser_running, $type, $orig_symbol, $symbol, "#$symbol", $make_page ); }
     elsif ($type eq "suffix") { &browse( $browser_running, $type, $orig_symbol, $symbol, "#[^\"]*" . $symbol . "\"", $make_page ); }
     elsif ($type eq "grep")   { &browse( $browser_running, $type, $orig_symbol, $symbol, "#[^\"]*" . $symbol . "[^\"]*\"", $make_page ); }
     elsif ($type eq "index")

@@ -1,4 +1,4 @@
-" 
+"
 " limp/vim/highlight.vim
 "
 " URL:
@@ -21,14 +21,14 @@
 " 2008-04-25
 " * Fixed regressions. Now properly highlights blocks again.
 "
-" 2008-04-18 
+" 2008-04-18
 " * Removed all mappings
 " * Removed < 7.00 compatibility
 " * Renamed to Lim-Highlight
 " * Changed from Search to Brackets[Block]
 "
 " Usage: {{{1
-"   Before loading: 
+"   Before loading:
 "       let g:LimpHighlight = 1
 "   or after loading:
 "       call LimpHighlight_start()
@@ -84,12 +84,12 @@ fun! LimpHighlight_stop()
     endif
     match none
     2match none
- 
+
     " remove cursorhold event for highlighting matching bracket
     augroup LimpHighlight
         au! <buffer>
     augroup END
- 
+
     let &ww = s:wwkeep
     set nolz
 endfun
@@ -183,7 +183,7 @@ fun! <SID>LimpHighlight_handler()
             2match none
         endif
     endif
- 
+
     " restore
     let &magic     = magickeep
     let @"         = regdq

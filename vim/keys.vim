@@ -1,4 +1,4 @@
-" 
+"
 " limp/vim/keys.vim
 "
 " Description:
@@ -25,7 +25,7 @@ vmap <buffer> <LocalLeader>ec      <Plug>EvalBlock
 vmap <buffer> <LocalLeader>ex      <Plug>EvalBlock
 
 " SBCL Abort Reset:   abort from the debugger
-nmap <buffer> <LocalLeader>ar      <Plug>AbortReset 
+nmap <buffer> <LocalLeader>ar      <Plug>AbortReset
 
 " Abort Interrupt:    send ^C to interpreter
 nmap <buffer> <LocalLeader>ai      <Plug>AbortInterrupt
@@ -38,12 +38,12 @@ nmap <buffer> <LocalLeader>tt      <Plug>TestTop
 " Load File:          load /this/ file into Lisp
 " Load Any File:      load whichever version of this file (.lisp not given)
 nmap <buffer> <LocalLeader>lf      <Plug>LoadThisFile
-nmap <buffer> <LocalLeader>la      <Plug>LoadAnyFile 
+nmap <buffer> <LocalLeader>la      <Plug>LoadAnyFile
 
 " Compile File:       compile the current file
 " Compile Load File:  compile, then load the current file
 nmap <buffer> <LocalLeader>cf      <Plug>CompileFile
-nmap <buffer> <LocalLeader>cl      <Plug>CompileAndLoadFile 
+nmap <buffer> <LocalLeader>cl      <Plug>CompileAndLoadFile
 
 " Goto Test Buffer:
 " Goto Split:         split current buffer and goto test buffer
@@ -51,7 +51,7 @@ nmap <buffer> <LocalLeader>gt      <Plug>GotoTestBuffer
 nmap <buffer> <LocalLeader>gs      <Plug>GotoTestBufferAndSplit
 
 " Goto Last:          return to last Lisp buffer
-nmap <buffer> <LocalLeader>gl      <Plug>GotoLastLispBuffer 
+nmap <buffer> <LocalLeader>gl      <Plug>GotoLastLispBuffer
 
 " HyperSpec:
 nmap <buffer> <LocalLeader>he      <Plug>HyperspecExact
@@ -69,7 +69,7 @@ nmap <buffer> <LocalLeader>hd      <Plug>HelpDescribe
 nmap <buffer> <LocalLeader>mt      <Plug>MarkTop
 
 " Format Current:     reindent/format
-" Format Top:    
+" Format Top:
 nmap <buffer> <LocalLeader>fc      <Plug>FormatCurrent
 nmap <buffer> <LocalLeader>ft      <Plug>FormatTop
 
